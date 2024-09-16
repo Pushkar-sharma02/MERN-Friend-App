@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+/* Home Page Styles */
+.home {
+  display: flex;
+  gap: 20px;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.friend-list, .friend-requests, .search-section, .recommendations {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.friend-list h2, .friend-requests h2, .search-section h2, .recommendations h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.accept-button {
+  background-color: #2ecc71;
+}
+
+.accept-button:hover {
+  background-color: #27ae60;
+}
+
+.reject-button {
+  background-color: #e74c3c;
+}
+
+.reject-button:hover {
+  background-color: #c0392b;
+}
+
+/* Search Form */
+.search-section form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-section input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-section button {
+  border-radius: 0 4px 4px 0;
+}
+
+/* Login and Register Pages */
+.login-form, .register-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.login-form h2, .register-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form input, .register-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.login-form button, .register-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover, .register-form button:hover {
+  background-color: #2980b9;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.error {
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .login-form, .register-form {
+    margin: 20px;
+  }
+}
