@@ -14,9 +14,21 @@ app.use(cors({
   credentials: true // Allow cookies to be sent with requests
 }));
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
+// MongoDB connection
+const mongoURL = process.env.mongoURL;
+
+
+if (!mongoURL) {
+  console.error('MONGODB_URL is not defined in the environment variables');
+  process.exit(1);
+}
+
+mongoose.connect(mongoURL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('Connected to MongoDB'))
+.catch(err => console.error('Error connecting to MongoDB:', err));
 
 // API Routes
 app.use('/api', authRoutes);
